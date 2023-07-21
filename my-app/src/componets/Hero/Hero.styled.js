@@ -5,7 +5,7 @@ import imgTablet from "../../images/Group3254.jpg";
 
 export const HeroTitel = styled.h1`
   font-weight: 400;
-  font-size: 40px;
+  font-size: 50px;
   line-height: 40px;
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -50,7 +50,7 @@ export const HeroSection = styled.section`
 
 export const HeroText = styled.p`
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 26px;
   text-align: center;
   color: #ffffff;
