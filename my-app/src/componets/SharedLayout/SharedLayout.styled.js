@@ -14,21 +14,29 @@ export const Header = styled.header`
   justify-content: space-between;
   text-align: center;
 
-  padding: 13px 0;
+  padding: 13px 10px;
   background-color: #fff;
 
-  > nav {
-    display: flex;
-  }
+  
+`;
+export const NavtitelList = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-export const NavTitle = styled.p`
+export const NavTitleItem = styled.li`
+  cursor: pointer;
   padding: 4px 22px;
   margin-left: 10px;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.03em;
-  
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.15);
+    text-shadow: 0px 5px 10px bisque;
+  }
 `;
 
 export const Logo = styled.div`
