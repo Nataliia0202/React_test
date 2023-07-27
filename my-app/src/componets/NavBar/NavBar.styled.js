@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import background from "../../images/Group.png"
 
 export const NavWraper = styled.div`
   /* justify-content: center;
@@ -18,6 +18,10 @@ export const NavWraper = styled.div`
     width: 100vw;
     height: 100vh;
     background-color: #f7c8b2;
+    background-image: url(${background});
+    background-repeat: no-repeat;
+    background-size: contain;
+    
     z-index: 10;
     overflow: auto;
   }
