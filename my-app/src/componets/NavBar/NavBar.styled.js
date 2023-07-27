@@ -20,7 +20,7 @@ export const NavWraper = styled.div`
     background-color: #f7c8b2;
     background-image: url(${background});
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     
     z-index: 10;
     overflow: auto;
@@ -101,7 +101,7 @@ export const MobMenuLink = styled.a`
   font-size: 16px;
   letter-spacing: 0.03em;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 834px) {
     font-size: 30px;
   }
   &:hover {
