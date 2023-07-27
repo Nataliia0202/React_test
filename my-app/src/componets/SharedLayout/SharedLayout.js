@@ -1,23 +1,22 @@
 import {
   ContainerHeder,
   Header,
-  NavtitelList,
-  NavTitleItem,
   Logo,
-  NavTitleLink,
-  IconMenu,
+  
 } from "./SharedLayout.styled";
 import { SvgIcon } from "./SvgIcon";
-import { IconLog } from "./SvgLog";
-// import { AuthTitle } from "componets/MobMenu/MobMenu.styled";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
+import { NavBar } from "componets/NavBar/NavBar";
+import { NavWraper, IconMenu } from "componets/NavBar/NavBar.styled";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+// import { IconLog } from "componets/NavBar/SvgLog";
+import { MobMenu } from "componets/NavBar/MobMenu";
 
-export const SharedLayout = ({ active }) => {
-  const [show, setShow] = useState(false);
-  const handleToggleShow = () => {
-    setShow(!show);
-  };
+export const SharedLayout = () => {
+ const [show, setShow] = useState(false);
+ const handleToggleShow = () => {
+   setShow(!show);
+ };
 
   return (
     <>
@@ -27,30 +26,18 @@ export const SharedLayout = ({ active }) => {
             <SvgIcon />
           </Logo>
           <IconMenu onClick={handleToggleShow}>
-            {show ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+            <AiOutlineMenu size={25} />
           </IconMenu>
-          <NavtitelList >
-            <NavTitleItem>
-              <NavTitleLink>О компании</NavTitleLink>
-            </NavTitleItem>
-            <NavTitleItem>
-              <NavTitleLink>Услуги</NavTitleLink>
-            </NavTitleItem>
-            <NavTitleItem>
-              <NavTitleLink>Цены</NavTitleLink>
-            </NavTitleItem>
-            <NavTitleItem>
-              <NavTitleLink>Наши работы</NavTitleLink>
-            </NavTitleItem>
-            <NavTitleItem>
-              <NavTitleLink>Контакты</NavTitleLink>
-            </NavTitleItem>
-            <NavTitleItem>
-              <NavTitleLink>
-                <IconLog />
-              </NavTitleLink>
-            </NavTitleItem>
-          </NavtitelList>
+          {show ? (
+            <NavWraper>
+              <IconMenu onClick={handleToggleShow}>
+                <AiOutlineClose size={25} />
+              </IconMenu>
+              <MobMenu />
+            </NavWraper>
+          ) : (
+            <NavBar />
+          )}
         </Header>
       </ContainerHeder>
     </>
