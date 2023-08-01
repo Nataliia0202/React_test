@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const SectionContainer = styled.div`
  
-  max-width: 1170px;
+  /* max-width: 1170px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 `;
 export const Titel = styled.h2`
     
@@ -14,27 +14,31 @@ export const Titel = styled.h2`
 
 `;
 
+export const MainContainer = styled.div`
+  height: 100%;
+  /* width: 600px; */
+  display: flex;
+align-items: center;
+max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+
+`;
+
 export const Window = styled.div`
   height: 100%;
   width: 100%;
   overflow: hidden;
 `;
 
-export const MainContainer = styled.div`
-  height: 500px;
-  width: 600px;
-    display: flex;
-align-items: center;
-
-`;
-
 
 export const SectionCentr = styled.section`
+height: 100%;
   width: 100%;
   display: flex;
   transition: translate;
   transition-property: transform;
-  transition-duration: 300ms;
+  transition-duration: 500ms;
   transition-timing-function: ease-in-out;
  
 `;

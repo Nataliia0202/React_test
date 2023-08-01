@@ -15,7 +15,7 @@ import {
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 
- const PAGE_WIDTH = 600
+ const PAGE_WIDTH = 1170
 
 export const WorkOur = () => {
   const [imageWork, setImageWork] = useState(works);
@@ -47,7 +47,7 @@ export const WorkOur = () => {
  
   return (
     <>
-      <SectionContainer>
+      
         <Titel>Наши работы</Titel>
         <MainContainer>
           <Arrow onClick={handleLeftArrowClick} style={{marginRight: 20}}>
@@ -75,7 +75,7 @@ export const WorkOur = () => {
             <FaChevronRight/>
           </Arrow>
           </MainContainer>
-      </SectionContainer>
+      
     </>
   );
 };
